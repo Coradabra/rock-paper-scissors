@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Rock Paper Scissors</title>
-    <script src="./script.js"></script>
   </head>
   <body>
-    
+    <div class="header">
+      <h1>ROCK, PAPER, SCISSORS!</h1>
+    </div>
+    <div class="content">
+      <div class="selections">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+      </div>
+      <div class="outcome"><p class="outcome-text"></p></div>
+      <div class="score">
+        <div class="player-card">
+          <h2 class="player-score"></h2>
+        </div>
+        <div class="computer-card">
+          <h2 class="computer-score"></h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Webpage by Cory Bradbury</p>
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>

@@ -1,3 +1,14 @@
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+
+rockBtn.addEventListener("click", playRound("ROCK"));
+paperBtn.addEventListener("click", playRound("PAPER"));
+scissorsBtn.addEventListener("click", playRound("SCISSORS"));
+
+const playerScoreDisplay = document.querySelector(".player-score");
+const computerScoreDisplay = document.querySelector(".computer-score");
+
 function getComputerChoice() {
   const randNum = Math.random() * 3;
 
@@ -10,10 +21,7 @@ function getComputerChoice() {
   }
 }
 
-function playRound() {
-  const playerSelection = prompt(
-    "Choose rock, paper, or scissors"
-  ).toUpperCase();
+function playRound(playerSelection) {
   const computerSelection = getComputerChoice();
   let playerScore = 0;
 
@@ -50,24 +58,3 @@ function playRound() {
 
   return playerScore;
 }
-
-function game() {
-  const rounds = 5;
-  let playerScore = 0;
-
-  for (i = 0; i < rounds; i++) {
-    playerScore += playRound();
-  }
-
-  if (playerScore > rounds / 2) {
-    console.log(
-      `You win overall. You won ${playerScore} games out of ${rounds} rounds.`
-    );
-  } else {
-    console.log(
-      `You lose overall. You won ${playerScore} games out of ${rounds} rounds.`
-    );
-  }
-}
-
-game();
