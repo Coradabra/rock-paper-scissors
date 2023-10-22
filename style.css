@@ -27,9 +27,7 @@ body {
   flex: 1;
 }
 
-#rock,
-#paper,
-#scissors {
+button {
   padding: 36px;
   font-size: 48px;
   margin: 32px;
@@ -93,6 +91,21 @@ body {
   font-size: 92px;
   align-self: center;
   padding: 0 48px;
+}
+
+.conclusion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.conclusion button {
+    background-color: #7ddd7d;
+}
+
+.conclusion p {
+    font-size: 36px;
 }
 
 .footer {
